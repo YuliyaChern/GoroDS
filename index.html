@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детский Спортивный Гороскоп</title>
+    <style>
+        :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: var(--line-height-normal);
+            padding: var(--space-20);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: var(--space-32);
+        }
+
+        h1 {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text);
+            margin-bottom: var(--space-12);
+        }
+
+        .subtitle {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-normal);
+        }
+
+        /* Daily Advice Section */
+        .daily-advice-section {
+            background: linear-gradient(135deg, var(--color-bg-1), var(--color-bg-3));
+            border-radius: var(--radius-lg);
+            padding: var(--space-32);
+            margin-bottom: var(--space-32);
+            border: 2px solid var(--color-card-border);
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .daily-advice-header {
+            margin-bottom: var(--space-20);
+        }
+
+        .daily-advice-emoji {
+            font-size: 48px;
+            margin-bottom: var(--space-12);
+        }
+
+        .daily-advice-title {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text);
+            margin-bottom: var(--space-8);
+        }
+
+        .daily-advice-date {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-medium);
+        }
+
+        .daily-advice-content {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-md);
+            padding: var(--space-24);
+            margin-top: var(--space-20);
+            text-align: left;
+        }
+
+        .daily-advice-text {
+            font-size: var(--font-size-base);
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: var(--space-20);
+        }
+
+        .daily-advice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-16);
+            margin-top: var(--space-16);
+        }
+
+        .advice-item {
+            background-color: var(--color-bg-2);
+            padding: var(--space-16);
+            border-radius: var(--radius-base);
+            border: 1px solid var(--color-card-border);
+        }
+
+        .advice-item-label {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-6);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .advice-item-value {
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text);
+        }
+
+        /* Zodiac Grid */
+        .zodiac-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-16);
+            margin-top: var(--space-24);
+        }
+
+        .zodiac-card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-20);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+        }
+
+        .zodiac-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--color-primary);
+        }
+
+        .zodiac-card:active {
+            transform: translateY(-2px);
+        }
+
+        .zodiac-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto var(--space-12) auto;
+            display: block;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+
+        .zodiac-name {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text);
+            margin-bottom: var(--space-6);
+        }
+
+        .zodiac-dates {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+        }
+
+        /* Results View */
+        .results-view {
+            display: none;
+        }
+
+        .results-view.active {
+            display: block;
+        }
+
+        .selection-view.hidden {
+            display: none;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-8);
+            padding: var(--space-10) var(--space-20);
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-standard);
+            margin-bottom: var(--space-24);
+        }
+
+        .back-button:hover {
+            background-color: var(--color-secondary-hover);
+        }
+
+        .results-header {
+            text-align: center;
+            padding: var(--space-32);
+            background-color: var(--color-surface);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-24);
+            border: 1px solid var(--color-card-border);
+        }
+
+        .results-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto var(--space-16) auto;
+            display: block;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+
+        .results-name {
+            font-size: var(--font-size-3xl);
+            font-weight: var(--font-weight-bold);
+            margin-bottom: var(--space-8);
+        }
+
+        .results-dates {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-16);
+        }
+
+        .results-traits {
+            font-size: var(--font-size-base);
+            color: var(--color-text);
+            font-weight: var(--font-weight-medium);
+            padding: var(--space-8) var(--space-20);
+            background-color: var(--color-bg-1);
+            border-radius: var(--radius-full);
+            display: inline-block;
+        }
+
+        .results-content {
+            display: grid;
+            gap: var(--space-20);
+        }
+
+        .info-card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-card-border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-24);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .info-card h3 {
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-16);
+            color: var(--color-text);
+        }
+
+        .sports-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-8);
+        }
+
+        .sport-tag {
+            background-color: var(--color-bg-2);
+            color: var(--color-text);
+            padding: var(--space-8) var(--space-16);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid var(--color-card-border);
+        }
+
+        .info-text {
+            font-size: var(--font-size-base);
+            line-height: 1.6;
+            color: var(--color-text);
+        }
+
+        .success-meter {
+            display: flex;
+            align-items: center;
+            gap: var(--space-16);
+            margin-top: var(--space-12);
+        }
+
+        .success-bar {
+            flex: 1;
+            height: 32px;
+            background-color: var(--color-secondary);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .success-fill {
+            height: 100%;
+            background-color: var(--color-primary);
+            border-radius: var(--radius-full);
+            transition: width 1s var(--ease-standard);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: var(--space-12);
+        }
+
+        .success-percentage {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-btn-primary-text);
+        }
+
+        .lucky-days {
+            display: flex;
+            gap: var(--space-8);
+            flex-wrap: wrap;
+        }
+
+        .day-badge {
+            background-color: var(--color-bg-3);
+            color: var(--color-text);
+            padding: var(--space-8) var(--space-16);
+            border-radius: var(--radius-base);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-medium);
+            border: 1px solid var(--color-card-border);
+        }
+
+        /* Daily Sports Advice for Each Sign */
+        .daily-sports-advice {
+            background: linear-gradient(135deg, var(--color-bg-5), var(--color-bg-7));
+            border: 2px solid var(--color-primary);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .daily-sports-advice h3 {
+            color: var(--color-primary);
+            margin-bottom: var(--space-12);
+        }
+
+        .daily-sports-advice .daily-advice-date {
+            font-size: var(--font-size-base);
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-medium);
+            margin-bottom: var(--space-16);
+        }
+
+        .daily-sports-advice .info-text {
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+            font-weight: var(--font-weight-medium);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: var(--space-12);
+            }
+
+            h1 {
+                font-size: var(--font-size-3xl);
+            }
+
+            .zodiac-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: var(--space-12);
+            }
+
+            .zodiac-card {
+                padding: var(--space-16);
+            }
+
+            .zodiac-emoji {
+                font-size: 36px;
+            }
+
+            .zodiac-name {
+                font-size: var(--font-size-base);
+            }
+
+            .results-header {
+                padding: var(--space-20);
+            }
+
+            .results-emoji {
+                font-size: 56px;
+            }
+
+            .info-card {
+                padding: var(--space-16);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Selection View -->
+        <div class="selection-view" id="selectionView">
+            <header>
+                <h1>⚽ Детский Спортивный Гороскоп 🏆</h1>
+                <p class="subtitle">Узнайте, какие виды спорта идеально подходят вашему ребенку по знаку зодиака</p>
+            </header>
+
+
+
+            <div class="zodiac-grid" id="zodiacGrid">
+                <!-- Cards will be generated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Results View -->
+        <div class="results-view" id="resultsView">
+            <button class="back-button" onclick="showSelection()">
+                <span>←</span>
+                <span>Назад к выбору</span>
+            </button>
+
+            <div class="results-header">
+                <div class="results-emoji" id="resultEmoji"></div>
+                <h2 class="results-name" id="resultName"></h2>
+                <p class="results-dates" id="resultDates"></p>
+                <span class="results-traits" id="resultTraits"></span>
+            </div>
+
+            <div class="results-content">
+                <div class="info-card">
+                    <h3>🏅 Рекомендуемые виды спорта</h3>
+                    <div class="sports-list" id="sportsList"></div>
+                </div>
+
+                <div class="info-card">
+                    <h3>💡 Почему именно эти виды спорта?</h3>
+                    <p class="info-text" id="recommendations"></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>👨‍👩‍👧 Советы родителям</h3>
+                    <p class="info-text" id="tips"></p>
+                </div>
+
+                <div class="info-card">
+                    <h3>📊 Прогноз успеха</h3>
+                    <div class="success-meter">
+                        <div class="success-bar">
+                            <div class="success-fill" id="successFill">
+                                <span class="success-percentage" id="successPercentage"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>🗓️ Удачные дни для тренировок</h3>
+                    <div class="lucky-days" id="luckyDays"></div>
+                </div>
+
+                <div class="info-card daily-sports-advice">
+                    <h3 id="dailySportsAdviceTitle">💪 Спортивный совет на сегодня</h3>
+                    <p class="daily-advice-date" id="dailySportsDate"></p>
+                    <p class="info-text" id="dailySportsAdviceText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Personalized daily advice for each zodiac sign (7 days per sign)
+        const zodiacDailyAdvice = {
+            'Овен': {
+                monday: "🔥 Начните неделю со смелости! Сегодня идеален для первой тренировки по ММА или самбо. Ваша энергия на стартовой позиции. Интенсивность: СРЕДНЯЯ. Разминайтесь хорошо и дерзайте!",
+                tuesday: "⚡ Вторник - день вашей МАКСИМАЛЬНОЙ силы! Покажите боевые навыки на спаррингах. Интенсивность: ВЫСОКАЯ. Это день, чтобы превзойти свои лимиты!",
+                wednesday: "⚖️ Найдите баланс между агрессией и контролем. Сегодня хороший день для техники. Интенсивность: СРЕДНЯЯ. Практикуйте четкие движения.",
+                thursday: "🌿 Ваша энергия иссякает - восстановитесь! Легкая растяжка или спокойное плавание. Интенсивность: ЛЕГКАЯ. Не переусложняйте.",
+                friday: "🎉 Пятница для вас - день веселья и команды! Групповые спортивные игры или групповой класс ММА. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Наслаждайтесь компанией!",
+                saturday: "💥 СУББОТА ВАШЕЙ СИЛЫ! Соревнования, вызовы, максимум нагрузок. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Это ваш день - покажите, на что способны!",
+                sunday: "☘️ Воскресенье - отдых перед боем. Легкая гимнастика, растяжка, медитация. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Подготовьтесь к новой неделе."
+            },
+            'Телец': {
+                monday: "🌟 Начните неделю с плана! Установите стабильный график занятий гимнастикой. Интенсивность: СРЕДНЯЯ. Тельцы нуждаются в предсказуемости.",
+                tuesday: "🏋️ Вторник - день для работы с весами и техники. Гиревой спорт отлично для вас. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Сосредоточьтесь на форме.",
+                wednesday: "🎭 Выберите эстетическую гимнастику - красоту нужно развивать! Интенсивность: СРЕДНЯЯ. Наслаждайтесь процессом.",
+                thursday: "🌿 Тело просит отдыха. Плавание или йога идеальны. Интенсивность: ЛЕГКАЯ. Восстановитесь перед выходными.",
+                friday: "🎊 Тельцы готовы к групповым занятиям! Танцы с друзьями - ваш выбор. Интенсивность: СРЕДНЯЯ. Получайте удовольствие!",
+                saturday: "💪 Суббота для амбиций! Повышайте нагрузки в гиревом спорте. Интенсивность: ВЫСОКАЯ. Дерзайте, Телец!",
+                sunday: "☘️ Воскресенье - полная релаксация. Медленное плавание, медитация. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Зарядитесь на неделю."
+            },
+            'Близнецы': {
+                monday: "🎨 Начните неделю с НОВОГО! Попробуйте брейк-данс впервые. Интенсивность: СРЕДНЯЯ. Новое вас вдохновляет!",
+                tuesday: "🔥 Вторник - день активности! Быстрые танцы, энергичная цирковая подготовка. Интенсивность: ВЫСОКАЯ. Двигайтесь быстро!",
+                wednesday: "🎭 Среда требует разнообразия! Комбинируйте танцы и цирк. Интенсивность: СРЕДНЯЯ. Не скучайте!",
+                thursday: "🌿 Даже Близнецы нуждаются в отдыхе! Легкие танцы или гибкость. Интенсивность: ЛЕГКАЯ. Восстановитесь.",
+                friday: "🎉 Пятница - ваш день! Групповые танцы, друзья, веселье. Интенсивность: СРЕДНЕ-ВЫСОКАЯ. Приглашайте компанию!",
+                saturday: "💥 Максимум энергии! Быстрый брейк-данс, цирковые трюки. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Покажите класс!",
+                sunday: "☘️ Воскресенье медленное. Растяжка, йога. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Подготовьте ум к новой неделе."
+            },
+            'Рак': {
+                monday: "💙 Начните неделю мягко. Танцы с добрым учителем - ваш выбор. Интенсивность: ЛЕГКАЯ-СРЕДНЯЯ. Создайте комфорт.",
+                tuesday: "🌊 Вторник - день плавания! Вода вас успокаивает и укрепляет. Интенсивность: СРЕДНЯЯ. Почувствуйте себя защищено.",
+                wednesday: "💃 Эстетическая гимнастика для выражения чувств. Интенсивность: СРЕДНЯЯ. Танцуйте свои эмоции!",
+                thursday: "🌿 Четверг - день восстановления. Йога, медитация, спокойствие. Интенсивность: ЛЕГКАЯ. Будьте нежны к себе.",
+                friday: "🎉 Групповые занятия с друзьями. Танцы, общение. Интенсивность: СРЕДНЯЯ. Вы нуждаетесь в поддержке.",
+                saturday: "💪 Суббота для гимнастики! Покажите свои эмоции через движение. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Дерзайте!",
+                sunday: "☘️ Воскресенье - релаксация. Плавание, йога, гармония. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Восстановитесь."
+            },
+            'Лев': {
+                monday: "👑 Начните неделю с блеска! Запишитесь на гимнастику с выступлениями. Интенсивность: СРЕДНЯЯ. Сцена зовет!",
+                tuesday: "🔥 Вторник - день для танцев на СЦЕНЕ! Интенсивность: ВЫСОКАЯ. Покажите класс!",
+                wednesday: "🎭 Эстетическая гимнастика с элементами артистизма. Интенсивность: СРЕДНЯЯ. Будьте красивы и изящны!",
+                thursday: "🌿 Даже Львы отдыхают! Легкие танцы, растяжка. Интенсивность: ЛЕГКАЯ. Восстановитесь перед финишем недели.",
+                friday: "🎉 Пятница - ваша ночь! Групповые танцы, зрители, признание. Интенсивность: СРЕДНЕ-ВЫСОКАЯ. Блистайте!",
+                saturday: "💥 СУББОТА СЛАВЫ! Соревнования, выступления, максимум внимания. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Вы готовы!",
+                sunday: "☘️ Воскресенье - переслащение. Медленные танцы, медитация. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Зарядитесь на неделю."
+            },
+            'Дева': {
+                monday: "📊 Начните с плана! Составьте график тренировок. Интенсивность: СРЕДНЯЯ. Организованность - ваше оружие.",
+                tuesday: "🏋️ Вторник - день для техники гиревого спорта! Работайте над формой. Интенсивность: ВЫСОКАЯ. Совершенство достигается делом!",
+                wednesday: "📈 Анализируйте прогресс! Йога с пониманием физиологии. Интенсивность: СРЕДНЯЯ. Учитесь!",
+                thursday: "🌿 Четверг - дневник тренировок. Легкая активность, отдых. Интенсивность: ЛЕГКАЯ. Восстановитесь.",
+                friday: "🎊 Пятница - поделитесь результатами! Групповые занятия. Интенсивность: СРЕДНЯЯ. Вы заслужили!",
+                saturday: "💪 Суббота - НОВЫЙ РЕКОРД! Гиревой спорт на максимум. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Покажите результат!",
+                sunday: "☘️ Воскресенье - отдых и планирование. Йога, медитация, новые цели. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Готовьтесь к победам."
+            },
+            'Весы': {
+                monday: "⚖️ Начните неделю с ГАРМОНИИ! Парные танцы или групповая гимнастика. Интенсивность: СРЕДНЯЯ. Баланс - ваше всё!",
+                tuesday: "🎭 Вторник - день танцев! Изящество и красота. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Будьте грациозны!",
+                wednesday: "💃 Эстетическая гимнастика - воплощение вашего идеала. Интенсивность: СРЕДНЯЯ. Развивайте красоту!",
+                thursday: "🌿 Четверг - восстановление в команде. Йога, парная растяжка. Интенсивность: ЛЕГКАЯ. Гармонизируйтесь.",
+                friday: "🎉 Пятница - СОЦИАЛЬНЫЕ ТАНЦЫ! С друзьями, веселые, красивые. Интенсивность: СРЕДНЯЯ. Наслаждайтесь!",
+                saturday: "💪 Суббота - максимум красоты! Гимнастика, фигурное катание. Интенсивность: ВЫСОКАЯ. Совершенство!",
+                sunday: "☘️ Воскресенье - гармоничный отдых. Медленные танцы, медитация. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Вернитесь в баланс."
+            },
+            'Скорпион': {
+                monday: "⚡ Начните неделю с КОНТРОЛЯ! Первый урок ММА - ваш выбор. Интенсивность: СРЕДНЯЯ. Подчините тело разуму!",
+                tuesday: "🔥 ВТОРНИК ВАШЕЙ СИЛЫ! ММА, самбо, спарринги. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Это ВАШ день!",
+                wednesday: "💪 Среда - техника айкидо. Контроль без агрессии. Интенсивность: ВЫСОКАЯ. Учитесь мудрости!",
+                thursday: "🌿 Четверг - восстановление после битвы. Йога, медитация. Интенсивность: ЛЕГКАЯ. Найдите спокойствие.",
+                friday: "🎊 Пятница - групповые тренировки. Дружеские спарринги. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Вы сильны!",
+                saturday: "💥 СУББОТА ВЛАСТИ! Максимум ММА, максимум интенсивности. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Покажите мастерство!",
+                sunday: "☘️ Воскресенье - медитация и контроль. Айкидо, йога. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Подготовьтесь к новой неделе."
+            },
+            'Стрелец': {
+                monday: "🎯 Начните неделю с ПРИКЛЮЧЕНИЯ! Выходная тренировка, новое место. Интенсивность: СРЕДНЯЯ. Исследуйте!",
+                tuesday: "🔥 Вторник - энергичный брейк-данс! Интенсивность: ВЫСОКАЯ. Двигайтесь свободно!",
+                wednesday: "🎭 Цирковая подготовка требует баланса. Интенсивность: СРЕДНЯЯ. Развивайте разные навыки!",
+                thursday: "🌿 Четверг - отдых на свежем воздухе. Легкие прогулки, дыхание. Интенсивность: ЛЕГКАЯ. Восстановитесь.",
+                friday: "🎉 Пятница - приключение с друзьями! Активные игры на улице. Интенсивность: СРЕДНЕ-ВЫСОКАЯ. Веселитесь!",
+                saturday: "💥 СУББОТА ЭКСТРИМА! Максимальные нагрузки на свежем воздухе. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Дерзайте!",
+                sunday: "☘️ Воскресенье - спокойные прогулки, природа. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Зарядитесь энергией."
+            },
+            'Козерог': {
+                monday: "📅 Начните неделю с ПЛАНА! Составьте месячный график гиревого спорта. Интенсивность: СРЕДНЯЯ. Дисциплина - успех!",
+                tuesday: "🏋️ Вторник - день техники! Гиревой спорт по плану. Интенсивность: ВЫСОКАЯ. Выполняйте программу!",
+                wednesday: "💪 Среда - самбо и техника. Контролируемая интенсивность. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Развивайтесь!",
+                thursday: "🌿 Четверг - восстановление по расписанию. Йога, растяжка. Интенсивность: ЛЕГКАЯ. Восстановитесь.",
+                friday: "🎊 Пятница - групповые тренировки. Дружеское соревнование. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Вы готовы!",
+                saturday: "💥 СУББОТА ВЕРШИН! Максимум самбо, максимум гирь. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Взберитесь на вершину!",
+                sunday: "☘️ Воскресенье - планирование новых целей. Медитация. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Готовьтесь к победе."
+            },
+            'Водолей': {
+                monday: "🎨 Начните неделю с ИННОВАЦИИ! Попробуйте необычный вид спорта. Интенсивность: СРЕДНЯЯ. Экспериментируйте!",
+                tuesday: "🔥 Вторник - цирковая подготовка! Необычные трюки. Интенсивность: ВЫСОКАЯ. Будьте оригинальны!",
+                wednesday: "🎭 Среда - брейк-данс с элементами паркура. Интенсивность: СРЕДНЯЯ. Комбинируйте!",
+                thursday: "🌿 Четверг - восстановление необычным способом. Медитация с музыкой. Интенсивность: ЛЕГКАЯ. Расслабьтесь.",
+                friday: "🎉 Пятница - СОЦИАЛЬНЫЕ ЭКСПЕРИМЕНТЫ! Новая группа, новый вид спорта. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Общайтесь!",
+                saturday: "💥 СУББОТА ЭКСПЕРИМЕНТОВ! Максимум цирковых трюков, максимум творчества. Интенсивность: ЭКСТРЕМАЛЬНАЯ. Дерзайте!",
+                sunday: "☘️ Воскресенье - медитация и планы. Йога. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Готовьтесь к неделе."
+            },
+            'Рыбы': {
+                monday: "💙 Начните неделю с ВДОХНОВЕНИЯ! Танцы под музыку - ваш выбор. Интенсивность: ЛЕГКАЯ-СРЕДНЯЯ. Почувствуйте ритм!",
+                tuesday: "🌊 Вторник - плавание и гибкость! Вода вас вдохновляет. Интенсивность: СРЕДНЯЯ. Будьте грациозны!",
+                wednesday: "🎭 Эстетическая гимнастика с музыкой. Интенсивность: СРЕДНЯЯ. Выражайте чувства!",
+                thursday: "🌿 Четверг - йога и медитация. Волшебная атмосфера. Интенсивность: ЛЕГКАЯ. Восстановитесь.",
+                friday: "🎉 Пятница - танцы с друзьями! Музыка, веселье. Интенсивность: СРЕДНЯЯ. Наслаждайтесь!",
+                saturday: "💪 Суббота - цирковая подготовка! Красивые трюки. Интенсивность: СРЕДНЯЯ-ВЫСОКАЯ. Блистайте!",
+                sunday: "☘️ Воскресенье - релаксация. Плавание, йога, гармония. Интенсивность: ОЧЕНЬ ЛЕГКАЯ. Восстановитесь на неделю."
+            }
+        };
+
+        // Old daily advice data (no longer used)
+        const dailyAdviceData = [
+            {
+                day: 1, // Monday
+                date: "24 ноября",
+                day_name: "Понедельник",
+                title: "Совет на понедельник",
+                emoji: "🌟",
+                text: "Начните неделю с энергией! Сегодня рекомендуется УМЕРЕННАЯ интенсивность. Выберите активность, которая вам нравится - танцы, легкий бег или спортивные игры. Это отличный день, чтобы вернуться к регулярным тренировкам. Уделите внимание разминке.",
+                intensity: "Умеренная 💪",
+                health_tip: "Пейте больше воды, хорошо завтракайте перед тренировкой",
+                recovery: "20 минут растяжки после занятия"
+            },
+            {
+                day: 2, // Tuesday
+                date: "25 ноября",
+                day_name: "Вторник",
+                title: "Совет на вторник",
+                emoji: "🔥",
+                text: "Вторник - день для ИНТЕНСИВНЫХ нагрузок! Самбо, ММА, боевые искусства, быстрый брейк-данс - время показать силу! Ваше тело полно энергии. Можно увеличить темп и сложность упражнений. Это благоприятный день для новых рекордов.",
+                intensity: "Высокая 🚀",
+                health_tip: "Разминайтесь 15-20 минут перед интенсивной тренировкой",
+                recovery: "Холодный душ, протеиновый перекус, полноценный ужин"
+            },
+            {
+                day: 3, // Wednesday
+                date: "26 ноября",
+                day_name: "Среда",
+                title: "Совет на среду",
+                emoji: "⚖️",
+                text: "Среда требует БАЛАНСА! Комбинируйте кардио и гибкость: утром йога или растяжка, вечером - активная игра или танцы. Это отличный день для восстановления после вторника, но без лени. Эстетическая гимнастика или плавание идеальны.",
+                intensity: "Средняя ⚡",
+                health_tip: "Медитация или дыхательные упражнения помогут найти баланс",
+                recovery: "Ванна с теплой водой, массаж ног, хороший сон"
+            },
+            {
+                day: 4, // Thursday
+                date: "27 ноября",
+                day_name: "Четверг",
+                title: "Совет на четверг",
+                emoji: "🌿",
+                text: "Четверг - день ВОССТАНОВЛЕНИЯ! Тело нуждается в отдыхе. Выбирайте ЛЕГКИЕ активности: неспешные прогулки, йога, синхронное плавание, растяжка. Это идеальный день для восстановительных процедур. Слушайте свое тело - усталость нормальна.",
+                intensity: "Легкая 🧘",
+                health_tip: "Больше фруктов и овощей, витамины, хороший сон (8-9 часов)",
+                recovery: "Никаких интенсивных нагрузок, только релаксация"
+            },
+            {
+                day: 5, // Friday
+                date: "28 ноября",
+                day_name: "Пятница",
+                title: "Совет на пятницу",
+                emoji: "🎉",
+                text: "Пятница - день для ВЕСЕЛЬЯ и СОЦИАЛЬНЫХ АКТИВНОСТЕЙ! Танцы с друзьями, групповой класс, игра в команде - интенсивность СРЕДНЕ-ВЫСОКАЯ. Это день, когда спорт - это удовольствие, а не обязанность. Пригласите друзей!",
+                intensity: "Средне-высокая 🎊",
+                health_tip: "Заряжайтесь позитивом, социальное взаимодействие - часть здоровья",
+                recovery: "Легкий массаж, общение с друзьями, хороший сон"
+            },
+            {
+                day: 6, // Saturday
+                date: "29 ноября",
+                day_name: "Суббота",
+                title: "Совет на субботу",
+                emoji: "⚡",
+                text: "Суббота - МАКСИМАЛЬНАЯ интенсивность! Это день для соревнований, вызовов и амбициозных целей. Самбо, ММА, быстрый брейк-данс, гиревой спорт - все допустимо! Тело полно сил. Это день, чтобы превзойти свои лимиты. Дерзайте!",
+                intensity: "Экстремальная 💥",
+                health_tip: "Хорошая разминка обязательна! Не забывайте про защиту",
+                recovery: "Глубокий массаж, контрастный душ, питательный ужин"
+            },
+            {
+                day: 0, // Sunday
+                date: "30 ноября",
+                day_name: "Воскресенье",
+                title: "Совет на воскресенье",
+                emoji: "☘️",
+                text: "Воскресенье - день для ВОССТАНОВЛЕНИЯ и ПЛАВНОСТИ! Йога, растяжка, медленное плавание, цирковая подготовка - все в спокойном темпе. Это день для восстановления перед новой неделей. ЛЕГКАЯ интенсивность. Наслаждайтесь процессом, а не результатом.",
+                intensity: "Очень легкая 🍃",
+                health_tip: "Полный отдых, медитация, план тренировок на неделю",
+                recovery: "Полная релаксация, сон, подготовка к понедельнику"
+            }
+        ];
+
+        // Zodiac data
+        const zodiacData = [
+            {
+                sign: 'Овен',
+                dates: '21 марта - 19 апреля',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/e5460a64-0f34-438b-858d-38c588f65cf4.png',
+                color: '#FF6B6B',
+                sports: ['ММА', 'Самбо', 'Гиревой спорт', 'Боевые искусства'],
+                traits: 'Энергичный, смелый, лидер',
+                recommendations: 'Овнам нужны активные, боевые виды спорта. Они любят соревнования и побеждать. ММА и самбо идеальны для их энергии и решительности.',
+                tips: [
+                    'На неделе 24-30 ноября: Запишите ребенка на пробную тренировку по ММА или самбо. Овнам сейчас особенно нужно выплеснуть энергию!',
+                    'Эта неделя благоприятна для первых спаррингов. Объясните, что вторник и среда - идеальные дни для новых вызовов в спорте.',
+                    'Мотивируйте на неделе 24-30 ноября рассказами о чемпионах. Овны готовы к лидерству!'
+                ],
+                success: '92%',
+                lucky_days: ['Вторник, 25 ноября', 'Среда, 26 ноября']
+            },
+            {
+                sign: 'Телец',
+                dates: '20 апреля - 20 мая',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/3adf5bdf-bc0c-414a-9191-895fed8bb4d0.png',
+                color: '#4ECDC4',
+                sports: ['Эстетическая гимнастика', 'Гиревой спорт', 'Танцы', 'Плавание'],
+                traits: 'Выносливый, стабильный, терпеливый',
+                recommendations: 'Тельцам идеально подходит эстетическая гимнастика - сочетание техники и красоты. Гиревой спорт развивает их природную силу и выносливость.',
+                tips: [
+                    'На неделе 24-30 ноября установите стабильный график: тренировки в один и тот же день недели. Телец нуждается в предсказуемости!',
+                    'Приведите ребенка на занятия эстетической гимнастики. Эта неделя идеальна для начала - Телец получит результаты с первых дней.',
+                    'Покажите видео красивых элементов гимнастики - Тельцы мотивируются визуальной красотой и техническим совершенством.'
+                ],
+                success: '88%',
+                lucky_days: ['Пятница, 28 ноября', 'Суббота, 29 ноября']
+            },
+            {
+                sign: 'Близнецы',
+                dates: '21 мая - 20 июня',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/270a3db4-36bf-4afe-babc-31cd445424f6.png',
+                color: '#FFE66D',
+                sports: ['Брейк-данс', 'Танцы', 'Цирковая подготовка', 'Бадминтон'],
+                traits: 'Активный, любопытный, социальный',
+                recommendations: 'Близнецам просто созданы брейк-данс и современные танцы! Цирковая подготовка даст им разнообразие и социальное общение, которое они обожают.',
+                tips: [
+                    'Неделя 24-30 ноября отлична для записи в танцевальную школу брейка! Близнецам нужны новые впечатления именно сейчас.',
+                    'Ищите групповые занятия - Близнецы не терпят скуку. Цирковая подготовка с друзьями будет идеальна на этой неделе.',
+                    'Переключайте виды активности в течение недели 24-30 ноября. Понедельник - танцы, среда - цирк, суббота - новый вызов!'
+                ],
+                success: '85%',
+                lucky_days: ['Понедельник, 24 ноября', 'Четверг, 27 ноября']
+            },
+            {
+                sign: 'Рак',
+                dates: '21 июня - 22 июля',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/27cb28bc-ec5b-4d1b-997f-0db3d8c7e3bc.png',
+                color: '#A8E6CF',
+                sports: ['Танцы', 'Эстетическая гимнастика', 'Плавание', 'Пилатес'],
+                traits: 'Чувствительный, заботливый, интуитивный',
+                recommendations: 'Ракам идеальны танцы и эстетическая гимнастика - они позволяют выражать эмоции. Плавание создает безопасное, комфортное пространство.',
+                tips: [
+                    'На неделе 24-30 ноября найдите учителя танца с добрым, поддерживающим стилем. Рак нуждается в теплой атмосфере.',
+                    'Эстетическая гимнастика позволит ребенку показать чувства через движение. Пятница и суббота - лучшие дни для начала.',
+                    'Во время тренировок на неделе 24-30 ноября будьте рядом, но не давите. Позволяйте Раку двигаться в своем темпе.'
+                ],
+                success: '87%',
+                lucky_days: ['Пятница, 28 ноября', 'Воскресенье, 30 ноября']
+            },
+            {
+                sign: 'Лев',
+                dates: '23 июля - 22 августа',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/52108c5d-f030-4dfd-a602-1004d1fdaeec.png',
+                color: '#FFB4D6',
+                sports: ['Эстетическая гимнастика', 'Танцы', 'Цирковая подготовка', 'Паркур'],
+                traits: 'Творческий, уверенный, артистичный',
+                recommendations: 'Львы блистают в эстетической гимнастике и танцах! Цирковая подготовка позволит им быть в центре внимания. Паркур дает зрелищность.',
+                tips: [
+                    'Неделя 24-30 ноября - найдите шоу или соревнование, где ребенок сможет выступать. Лев нуждается в аудитории!',
+                    'Запишитесь на эстетическую гимнастику с акцентом на выступления. Лев готов к сцене именно в эту неделю.',
+                    'Во время тренировок на 24-30 ноября фотографируйте красивые элементы - делитесь с семьей. Лев вдохновляется признанием.'
+                ],
+                success: '91%',
+                lucky_days: ['Вторник, 25 ноября', 'Воскресенье, 30 ноября']
+            },
+            {
+                sign: 'Дева',
+                dates: '23 августа - 22 сентября',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/7facece2-c2e4-4cbb-8d7f-1a4b10aa3d6f.png',
+                color: '#95E1D3',
+                sports: ['Эстетическая гимнастика', 'Гиревой спорт', 'Йога', 'Легкая атлетика'],
+                traits: 'Аккуратный, логичный, анализирующий',
+                recommendations: 'Девам идеальна эстетическая гимнастика с четкой техникой. Гиревой спорт развивает правильную форму и силу. Йога совершенствует тело.',
+                tips: [
+                    'Ведите дневник тренировок на неделе 24-30 ноября. Дева любит отслеживать прогресс и анализировать результаты.',
+                    'На этой неделе найдите тренера, который объяснит физиологию каждого движения. Дева вдохновляется знаниями!',
+                    'Суббота и воскресенье - идеальные дни для тренировок на неделе 24-30 ноября. Запланируйте серьезные занятия именно тогда.'
+                ],
+                success: '89%',
+                lucky_days: ['Суббота, 29 ноября', 'Воскресенье, 30 ноября']
+            },
+            {
+                sign: 'Весы',
+                dates: '23 сентября - 22 октября',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/seedream_images/4a5f50c6-9c73-4951-84ae-35f79474f6a2.png',
+                color: '#FFDDC1',
+                sports: ['Танцы', 'Эстетическая гимнастика', 'Айкидо', 'Фигурное катание'],
+                traits: 'Гармоничный, социальный, любящий баланс',
+                recommendations: 'Весам созданы танцы и эстетическая гимнастика - воплощение гармонии. Айкидо учит балансу и ненасильственному противодействию.',
+                tips: [
+                    'На неделе 24-30 ноября запишитесь на парные танцы или групповую эстетическую гимнастику. Весам нужна гармоничная команда!',
+                    'Найдите учителя айкидо, который преподает философию баланса. Четверг и пятница идеальны для начала новых занятий.',
+                    'Эстетическая гимнастика позволит Весам развивать красоту движений. Эта неделя благоприятна для начала пути к совершенству.'
+                ],
+                success: '86%',
+                lucky_days: ['Четверг, 27 ноября', 'Пятница, 28 ноября']
+            },
+            {
+                sign: 'Скорпион',
+                dates: '23 октября - 21 ноября',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/42dfce95-0729-4a24-aa20-cff254cc2425.png',
+                color: '#FF6B9D',
+                sports: ['ММА', 'Айкидо', 'Самбо', 'Скалолазание'],
+                traits: 'Интенсивный, сосредоточенный, решительный',
+                recommendations: 'Скорпионам идеальны ММА, айкидо и самбо - боевые искусства развивают их естественную интенсивность и силу воли.',
+                tips: [
+                    'Неделя 24-30 ноября - идеальное время для начала ММА. Скорпион готов к серьезным вызовам прямо сейчас!',
+                    'Найдите тренера, который уважает интенсивность Скорпиона. Вторник и четверг - дни максимальной концентрации на этой неделе.',
+                    'Айкидо научит Скорпиона контролировать мощь. На неделе 24-30 ноября это будет особенно ценно для развития.'
+                ],
+                success: '93%',
+                lucky_days: ['Вторник, 25 ноября', 'Четверг, 27 ноября']
+            },
+            {
+                sign: 'Стрелец',
+                dates: '22 ноября - 21 декабря',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/dc0f59e5-5dde-4291-91b0-201a438afb6c.png',
+                color: '#C5D3FF',
+                sports: ['Гиревой спорт', 'Брейк-данс', 'Цирковая подготовка', 'Легкая атлетика'],
+                traits: 'Авантюрный, оптимистичный, свободолюбивый',
+                recommendations: 'Стрельцам идеальны гиревой спорт, брейк-данс и цирковая подготовка - активные, авантюрные виды спорта на открытом пространстве.',
+                tips: [
+                    'На неделе 24-30 ноября запланируйте тренировки на свежем воздухе. Стрелец нуждается в свободе и приключениях!',
+                    'Цирковая подготовка идеальна для Стрельца - она разнообразна и захватывающа. Запишитесь на мастер-класс на неделе 24-30.',
+                    'Четверг и суббота - дни максимальной энергии. Используйте их для самых интенсивных тренировок на этой неделе.'
+                ],
+                success: '90%',
+                lucky_days: ['Четверг, 27 ноября', 'Суббота, 29 ноября']
+            },
+            {
+                sign: 'Козерог',
+                dates: '22 декабря - 19 января',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/seedream_images/b8ba1cb9-0b7f-4928-ac69-5d62f195eb2e.png',
+                color: '#8B7D6B',
+                sports: ['Гиревой спорт', 'Самбо', 'Айкидо', 'Скалолазание'],
+                traits: 'Амбициозный, дисциплинированный, целеустремленный',
+                recommendations: 'Козерогам идеальны гиревой спорт, самбо и айкидо - требующие дисциплины и долгосрочного плана. Скалолазание символизирует их подъем к вершине.',
+                tips: [
+                    'Составьте план тренировок на месяц начиная с недели 24-30 ноября. Козерог нуждается в четких целях и графике.',
+                    'Гиревой спорт и самбо на неделе 24-30 ноября - выбор амбициозного Козерога. Суббота и воскресенье лучшие дни для начала.',
+                    'Найдите соревнование на конец года. Козерог готов к долгосрочной цели и готовится к успеху прямо сейчас.'
+                ],
+                success: '94%',
+                lucky_days: ['Суббота, 29 ноября', 'Воскресенье, 30 ноября']
+            },
+            {
+                sign: 'Водолей',
+                dates: '20 января - 18 февраля',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/e1e41ea3-b840-432a-bde4-fa331506833f.png',
+                color: '#B4E7FF',
+                sports: ['Цирковая подготовка', 'Брейк-данс', 'Гиревой спорт', 'Паркур'],
+                traits: 'Инновационный, независимый, оригинальный',
+                recommendations: 'Водолею нужны необычные, инновационные виды спорта. Цирковая подготовка и брейк-данс позволяют выражать оригинальность.',
+                tips: [
+                    'На неделе 24-30 ноября ищите нестандартные, экспериментальные виды спорта. Цирковая подготовка идеальна для Водолея!',
+                    'Вторник и четверг - дни творческих экспериментов. Попробуйте что-то совершенно новое на этой неделе.',
+                    'Найдите сообщество единомышленников на неделе 24-30 ноября. Водолей питается идеями и социальным взаимодействием.'
+                ],
+                success: '87%',
+                lucky_days: ['Вторник, 25 ноября', 'Четверг, 27 ноября']
+            },
+            {
+                sign: 'Рыбы',
+                dates: '19 февраля - 20 марта',
+                iconUrl: 'https://user-gen-media-assets.s3.amazonaws.com/gemini_images/c7d328c0-4324-4b0f-8b5e-8ae0f6ef12d2.png',
+                color: '#FFB3D9',
+                sports: ['Танцы', 'Эстетическая гимнастика', 'Цирковая подготовка', 'Йога'],
+                traits: 'Творческий, чувствительный, вдохновленный',
+                recommendations: 'Рыбам идеальны танцы, эстетическая гимнастика и цирковая подготовка - грациозные, творческие виды с музыкой и вдохновением.',
+                tips: [
+                    'На неделе 24-30 ноября выбирайте занятия с хорошей музыкой. Рыба вдохновляется ритмом и гармонией!',
+                    'Эстетическая гимнастика позволит выражать эмоции через красивые движения. Четверг и понедельник идеальны для начала.',
+                    'Создайте волшебную атмосферу вокруг тренировок. На этой неделе Рыба особенно чувствительна к окружению.'
+                ],
+                success: '88%',
+                lucky_days: ['Понедельник, 24 ноября', 'Пятница, 28 ноября']
+            }
+        ];
+
+        // Current selected sign
+        let currentSign = null;
+
+        // Initialize app
+        function initApp() {
+            renderZodiacGrid();
+        }
+
+        // Get daily advice for specific zodiac sign
+        function getDailyAdviceForSign(signName) {
+            const today = new Date();
+            const dayOfWeek = today.getDay(); // 0 = Sunday, 1 = Monday, etc.
+            
+            const dayNames = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+            const dayKey = dayNames[dayOfWeek];
+            
+            const signAdvice = zodiacDailyAdvice[signName];
+            if (signAdvice && signAdvice[dayKey]) {
+                return signAdvice[dayKey];
+            }
+            
+            return "Сегодня отличный день для любимого спорта!";
+        }
+
+        // Get formatted date
+        function getFormattedDate() {
+            const today = new Date();
+            const options = { day: 'numeric', month: 'long', year: 'numeric', weekday: 'long' };
+            return today.toLocaleDateString('ru-RU', options);
+        }
+
+        // Render zodiac sign cards
+        function renderZodiacGrid() {
+            const grid = document.getElementById('zodiacGrid');
+            grid.innerHTML = '';
+
+            zodiacData.forEach((sign, index) => {
+                const card = document.createElement('div');
+                card.className = 'zodiac-card';
+                card.onclick = () => selectSign(index);
+                
+                card.innerHTML = `
+                    <img src="${sign.iconUrl}" alt="${sign.sign}" class="zodiac-icon" />
+                    <div class="zodiac-name">${sign.sign}</div>
+                    <div class="zodiac-dates">${sign.dates}</div>
+                `;
+                
+                grid.appendChild(card);
+            });
+        }
+
+        // Select a zodiac sign
+        function selectSign(index) {
+            currentSign = zodiacData[index];
+            showResults();
+        }
+
+        // Show results view
+        function showResults() {
+            if (!currentSign) return;
+
+            // Update header
+            document.getElementById('resultEmoji').innerHTML = `<img src="${currentSign.iconUrl}" alt="${currentSign.sign}" class="results-icon" />`;
+            document.getElementById('resultName').textContent = currentSign.sign;
+            document.getElementById('resultDates').textContent = currentSign.dates;
+            document.getElementById('resultTraits').textContent = currentSign.traits;
+
+            // Render sports list
+            const sportsList = document.getElementById('sportsList');
+            sportsList.innerHTML = '';
+            currentSign.sports.forEach(sport => {
+                const tag = document.createElement('span');
+                tag.className = 'sport-tag';
+                tag.textContent = sport;
+                sportsList.appendChild(tag);
+            });
+
+            // Update recommendations and tips
+            document.getElementById('recommendations').textContent = currentSign.recommendations;
+            
+            // Randomly select a tip from the tips array
+            const randomTip = currentSign.tips[Math.floor(Math.random() * currentSign.tips.length)];
+            document.getElementById('tips').textContent = randomTip;
+
+            // Update success meter
+            const successValue = parseInt(currentSign.success);
+            const successFill = document.getElementById('successFill');
+            const successPercentage = document.getElementById('successPercentage');
+            
+            // Reset animation
+            successFill.style.width = '0%';
+            setTimeout(() => {
+                successFill.style.width = successValue + '%';
+                successPercentage.textContent = currentSign.success;
+            }, 100);
+
+            // Render lucky days
+            const luckyDays = document.getElementById('luckyDays');
+            luckyDays.innerHTML = '';
+            currentSign.lucky_days.forEach(day => {
+                const badge = document.createElement('span');
+                badge.className = 'day-badge';
+                badge.textContent = day;
+                luckyDays.appendChild(badge);
+            });
+
+            // Render daily sports advice for this sign
+            const dailyAdvice = getDailyAdviceForSign(currentSign.sign);
+            const formattedDate = getFormattedDate();
+            document.getElementById('dailySportsAdviceTitle').textContent = `💪 Спортивный совет на сегодня для ${currentSign.sign}`;
+            document.getElementById('dailySportsDate').textContent = formattedDate;
+            document.getElementById('dailySportsAdviceText').textContent = dailyAdvice;
+
+            // Toggle views
+            document.getElementById('selectionView').classList.add('hidden');
+            document.getElementById('resultsView').classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
+        // Show selection view
+        function showSelection() {
+            document.getElementById('selectionView').classList.remove('hidden');
+            document.getElementById('resultsView').classList.remove('active');
+            window.scrollTo(0, 0);
+        }
+
+        // Initialize on load
+        initApp();
+    </script>
+</body>
+</html>
